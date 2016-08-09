@@ -1,5 +1,7 @@
 #update the box
 yum update -y
 
-#This is a generic vagrant box No other packages will be installed past the base
-#box in Master. Each branch will have a different configuration.
+#Install Java JDK
+cd /tmp
+wget --no-check-certificate --no-cookies --header "Cookie: oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u102-b14/jdk-8u102-linux-x64.rpm
+rpm -Uvh jdk-8u102-linux-x64.rpm
