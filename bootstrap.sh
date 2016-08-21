@@ -1,5 +1,12 @@
 #update the box
 yum update -y
 
-#This is a generic vagrant box No other packages will be installed past the base
-#box in Master. Each branch will have a different configuration.
+# Install Docker Engine
+curl -fsSL https://get.docker.com/ | sh
+
+systemctl enable docker
+systemctl start docker
+
+# create docker group and add the vagrant user to it
+groupadd docker
+usermod -aG docker vagrant
