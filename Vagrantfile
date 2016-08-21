@@ -18,7 +18,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "https://vagrant.lib.wvu.edu/CentOS7.box"
 
-  config.vm.network :forwarded_port, guest: 80, host: 8081
+  config.vm.network :forwarded_port, guest: 4567, host: 4567
+  config.vm.network :forwarded_port, guest: 80, host: 8080
   #config.vm.network :forwarded_port, guest: 22, host: 2222
 
 
